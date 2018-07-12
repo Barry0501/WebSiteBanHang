@@ -3,29 +3,37 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WebSiteBanHang.Models;
 
 namespace WebSiteBanHang.Controllers
 {
     public class HomeController : Controller
     {
+        QuanLyBanHangEntities db = new QuanLyBanHangEntities();
         public ActionResult Index()
         {
 
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Menu()
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
+            var lstSanPham = db.SanPhams;
+            return PartialView(lstSanPham);
         }
 
-        public ActionResult Contact()
+        public ActionResult rightBanner()
         {
-            ViewBag.Message = "Your contact page.";
+            
+        }
 
-            return View();
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                db.Dispose();
+            }
+            base.Dispose(disposing);
         }
     }
 }
