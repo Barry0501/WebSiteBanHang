@@ -12,7 +12,6 @@ namespace WebSiteBanHang.Controllers
         QuanLyBanHangEntities db = new QuanLyBanHangEntities();
         public ActionResult Index()
         {
-
             return View();
         }
 
@@ -22,9 +21,15 @@ namespace WebSiteBanHang.Controllers
             return PartialView(lstSanPham);
         }
 
-        public ActionResult rightBanner()
+        public ActionResult DangKy(ThanhVien tv)
         {
-            
+            if(ModelState.IsValid)
+            {
+                db.ThanhViens.Add(tv);
+                db.SaveChanges();
+                return RedirectToAction("Index", "Home");
+            }
+            return PartialView("~/Views/Home/LoginPartial.cshtml", tv);
         }
 
         protected override void Dispose(bool disposing)

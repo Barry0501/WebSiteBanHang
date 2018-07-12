@@ -361,7 +361,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Function Name="usp_getAllProducts" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="usp_getLaptopNew" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="QuanLyBanHangModelStoreContainer">
           <EntitySet Name="BinhLuan" EntityType="Self.BinhLuan" Schema="dbo" store:Type="Tables" />
@@ -1144,33 +1143,6 @@
           <FunctionImportMapping FunctionImportName="usp_getLaptopNew" FunctionName="QuanLyBanHangModel.Store.usp_getLaptopNew">
             <ResultMapping>
               <ComplexTypeMapping TypeName="QuanLyBanHangModel.usp_getLaptopNew_Result">
-                <ScalarProperty Name="MaSP" ColumnName="MaSP" />
-                <ScalarProperty Name="TenSP" ColumnName="TenSP" />
-                <ScalarProperty Name="DonGia" ColumnName="DonGia" />
-                <ScalarProperty Name="NgayCapNhap" ColumnName="NgayCapNhap" />
-                <ScalarProperty Name="CauHinh" ColumnName="CauHinh" />
-                <ScalarProperty Name="MoTa" ColumnName="MoTa" />
-                <ScalarProperty Name="HinhAnh" ColumnName="HinhAnh" />
-                <ScalarProperty Name="SoLuongTon" ColumnName="SoLuongTon" />
-                <ScalarProperty Name="LuotXem" ColumnName="LuotXem" />
-                <ScalarProperty Name="LuotBinhChon" ColumnName="LuotBinhChon" />
-                <ScalarProperty Name="LuotBinhLuan" ColumnName="LuotBinhLuan" />
-                <ScalarProperty Name="SoLanMua" ColumnName="SoLanMua" />
-                <ScalarProperty Name="Moi" ColumnName="Moi" />
-                <ScalarProperty Name="MaNCC" ColumnName="MaNCC" />
-                <ScalarProperty Name="MaNSX" ColumnName="MaNSX" />
-                <ScalarProperty Name="MaLoaiSP" ColumnName="MaLoaiSP" />
-                <ScalarProperty Name="DaXoa" ColumnName="DaXoa" />
-                <ScalarProperty Name="HinhAnh1" ColumnName="HinhAnh1" />
-                <ScalarProperty Name="HinhAnh2" ColumnName="HinhAnh2" />
-                <ScalarProperty Name="HinhAnh3" ColumnName="HinhAnh3" />
-                <ScalarProperty Name="HinhAnh4" ColumnName="HinhAnh4" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="usp_getAllProducts" FunctionName="QuanLyBanHangModel.Store.usp_getAllProducts">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="QuanLyBanHangModel.usp_getAllProducts_Result">
                 <ScalarProperty Name="MaSP" ColumnName="MaSP" />
                 <ScalarProperty Name="TenSP" ColumnName="TenSP" />
                 <ScalarProperty Name="DonGia" ColumnName="DonGia" />

@@ -51,90 +51,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <script type="text/javascript" src="~/Content/js/bootstrap-3.1.1.min.js"></script>
     <!-- //for bootstrap working -->
     <!-- header modal -->
-    <div class="modal fade" id="myModal88" tabindex="-1" role="dialog" aria-labelledby="myModal88"
-         aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                        &times;
-                    </button>
-                    <h4 class="modal-title" id="myModalLabel">Don't Wait, Login now!</h4>
-                </div>
-                <div class="modal-body modal-body-sub">
-                    <div class="row">
-                        <div class="col-md-8 modal_body_left modal_body_left1" style="border-right: 1px dotted #C2C2C2;padding-right:3em;">
-                            <div class="sap_tabs">
-                                <div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
-                                    <ul>
-                                        <li class="resp-tab-item" aria-controls="tab_item-0"><span>Sign in</span></li>
-                                        <li class="resp-tab-item" aria-controls="tab_item-1"><span>Sign up</span></li>
-                                    </ul>
-                                    <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
-                                        <div class="facts">
-                                            <div class="register">
-                                                <form action="#" method="post">
-                                                    <input name="Email" placeholder="Email Address" type="text" required="">
-                                                    <input name="Password" placeholder="Password" type="password" required="">
-                                                    <div class="sign-up">
-                                                        <input type="submit" value="Sign in" />
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="tab-2 resp-tab-content" aria-labelledby="tab_item-1">
-                                        <div class="facts">
-                                            <div class="register">
-                                                <form action="#" method="post">
-                                                    <input placeholder="Name" name="Name" type="text" required="">
-                                                    <input placeholder="Email Address" name="Email" type="email" required="">
-                                                    <input placeholder="Password" name="Password" type="password" required="">
-                                                    <input placeholder="Confirm Password" name="Password" type="password" required="">
-                                                    <div class="sign-up">
-                                                        <input type="submit" value="Create Account" />
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <script src="~/Content/js/easyResponsiveTabs.js" type="text/javascript"></script>
-                            <script type="text/javascript">
-                                $(document).ready(function () {
-                                    $('#horizontalTab').easyResponsiveTabs({
-                                        type: 'default', //Types: default, vertical, accordion
-                                        width: 'auto', //auto or any width like 600px
-                                        fit: true   // 100% fit in a container
-                                    });
-                                });
-                            </script>
-                            <div id="OR" class="hidden-xs">OR</div>
-                        </div>
-                        <div class="col-md-4 modal_body_right modal_body_right1">
-                            <div class="row text-center sign-with">
-                                <div class="col-md-12">
-                                    <h3 class="other-nw">Sign in with</h3>
-                                </div>
-                                <div class="col-md-12">
-                                    <ul class="social">
-                                        <li class="social_facebook"><a href="#" class="entypo-facebook"></a></li>
-                                        <li class="social_dribbble"><a href="#" class="entypo-dribbble"></a></li>
-                                        <li class="social_twitter"><a href="#" class="entypo-twitter"></a></li>
-                                        <li class="social_behance"><a href="#" class="entypo-behance"></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="modal fade" id="myModal88" tabindex="-1" role="dialog" aria-labelledby="myModal88" aria-hidden="true" style="display: none;">
+        @Html.Partial("~/Views/Home/LoginPopUpPartial.cshtml")
     </div>
-    <script>
-        $('#myModal88').modal('show');
-    </script>
     <!-- header modal -->
     <!-- header -->
     <div class="header" id="home1">
@@ -175,7 +94,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         </div>
     </div>
     <!-- //banner -->
-    <!-- banner-bottom -->
     <div class="banner-bottom">
         <div class="container">
             <div class="col-md-5 wthree_banner_bottom_left">
@@ -185,10 +103,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     </a>
                 </div>
                 <!-- pop-up-box -->
-                <script src="~/Content/js/jquery.magnific-popup.js" type="text/javascript"></script>
+                <script src="~/Content/js/jquery.magnific-popup.js"></script>
                 <!--//pop-up-box -->
                 <div id="small-dialog" class="mfp-hide">
-                    <iframe src="~/Content/https://www.youtube.com/embed/ZQa6GUVnbNM"></iframe>
+                    <iframe src="https://www.youtube.com/embed/ZQa6GUVnbNM"></iframe>
                 </div>
                 <script>
                     $(document).ready(function () {
@@ -212,21 +130,21 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <ul id="myTab" class="nav nav-tabs" role="tablist">
                         <li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home">Mobiles</a></li>
                         <li role="presentation"><a href="#audio" role="tab" id="audio-tab" data-toggle="tab" aria-controls="audio">Audio</a></li>
-                        <li role="presentation"><a href="#video" role="tab" id="video-tab" data-toggle="tab" aria-controls="video">Computer</a></li>                 
+                        <li role="presentation"><a href="#video" role="tab" id="video-tab" data-toggle="tab" aria-controls="video">Computer</a></li>
+                        
                     </ul>
                     <div id="myTabContent" class="tab-content">
                         <div role="tabpanel" class="tab-pane fade active in" id="home" aria-labelledby="home-tab">
                             <div class="agile_ecommerce_tabs">
                                 <div class="col-md-4 agile_ecommerce_tab_left">
                                     <div class="hs-wrapper">
-                                        <img src="~/Content/images/3.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/4.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/5.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/6.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/7.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/3.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/4.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/5.jpg" alt=" " class="img-responsive" />
+                                        <img src="~/Content/img/ImagesSanPham/AcerA101-16GB.png" alt=" " class="img-responsive">
+                                        <img src="~/Content/img/ImagesSanPham/AcerA101-Red.png" alt=" " class="img-responsive">
+                                        <img src="~/Content/img/ImagesSanPham/AcerB1-A71-83170501NK.png" alt=" " class="img-responsive">
+                                        <img src="~/Content/img/ImagesSanPham/GalaxyG7102.png" alt=" " class="img-responsive">
+                                        <img src="~/Content/img/ImagesSanPham/GalaxyK-Zoom.png" alt=" " class="img-responsive">
+                                        <img src="~/Content/img/ImagesSanPham/GalaxyY-S5360.png" alt=" " class="img-responsive">
+                                        <img src="~/Content/img/ImagesSanPham/LGG-Pro2.png" alt=" " class="img-responsive">                                      
                                         <div class="w3_hs_bottom">
                                             <ul>
                                                 <li>
@@ -239,24 +157,24 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     <div class="simpleCart_shelfItem">
                                         <p><span>$380</span> <i class="item_price">$350</i></p>
                                         <form action="#" method="post">
-                                            <input type="hidden" name="cmd" value="_cart" />
-                                            <input type="hidden" name="add" value="1" />
-                                            <input type="hidden" name="w3ls_item" value="Mobile Phone1" />
-                                            <input type="hidden" name="amount" value="350.00" />
+                                            <input type="hidden" name="cmd" value="_cart">
+                                            <input type="hidden" name="add" value="1">
+                                            <input type="hidden" name="w3ls_item" value="Mobile Phone1">
+                                            <input type="hidden" name="amount" value="350.00">
                                             <button type="submit" class="w3ls-cart">Add to cart</button>
                                         </form>
                                     </div>
                                 </div>
                                 <div class="col-md-4 agile_ecommerce_tab_left">
                                     <div class="hs-wrapper">
-                                        <img src="~/Content/images/4.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/5.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/6.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/7.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/3.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/4.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/5.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/6.jpg" alt=" " class="img-responsive" />
+                                        <img src="~/Content/images/4.jpg" alt=" " class="img-responsive">
+                                        <img src="~/Content/images/5.jpg" alt=" " class="img-responsive">
+                                        <img src="~/Content/images/6.jpg" alt=" " class="img-responsive">
+                                        <img src="~/Content/images/7.jpg" alt=" " class="img-responsive">
+                                        <img src="~/Content/images/3.jpg" alt=" " class="img-responsive">
+                                        <img src="~/Content/images/4.jpg" alt=" " class="img-responsive">
+                                        <img src="~/Content/images/5.jpg" alt=" " class="img-responsive">
+                                        <img src="~/Content/images/6.jpg" alt=" " class="img-responsive">
                                         <div class="w3_hs_bottom">
                                             <ul>
                                                 <li>
@@ -269,24 +187,24 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     <div class="simpleCart_shelfItem">
                                         <p><span>$330</span> <i class="item_price">$302</i></p>
                                         <form action="#" method="post">
-                                            <input type="hidden" name="cmd" value="_cart" />
-                                            <input type="hidden" name="add" value="1" />
-                                            <input type="hidden" name="w3ls_item" value="Mobile Phone2" />
-                                            <input type="hidden" name="amount" value="302.00" />
+                                            <input type="hidden" name="cmd" value="_cart">
+                                            <input type="hidden" name="add" value="1">
+                                            <input type="hidden" name="w3ls_item" value="Mobile Phone2">
+                                            <input type="hidden" name="amount" value="302.00">
                                             <button type="submit" class="w3ls-cart">Add to cart</button>
                                         </form>
                                     </div>
                                 </div>
                                 <div class="col-md-4 agile_ecommerce_tab_left">
                                     <div class="hs-wrapper">
-                                        <img src="~/Content/images/7.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/6.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/4.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/3.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/5.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/7.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/4.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/6.jpg" alt=" " class="img-responsive" />
+                                        <img src="~/Content/images/7.jpg" alt=" " class="img-responsive">
+                                        <img src="~/Content/images/6.jpg" alt=" " class="img-responsive">
+                                        <img src="~/Content/images/4.jpg" alt=" " class="img-responsive">
+                                        <img src="~/Content/images/3.jpg" alt=" " class="img-responsive">
+                                        <img src="~/Content/images/5.jpg" alt=" " class="img-responsive">
+                                        <img src="~/Content/images/7.jpg" alt=" " class="img-responsive">
+                                        <img src="~/Content/images/4.jpg" alt=" " class="img-responsive">
+                                        <img src="~/Content/images/6.jpg" alt=" " class="img-responsive">
                                         <div class="w3_hs_bottom">
                                             <ul>
                                                 <li>
@@ -299,10 +217,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     <div class="simpleCart_shelfItem">
                                         <p><span>$250</span> <i class="item_price">$245</i></p>
                                         <form action="#" method="post">
-                                            <input type="hidden" name="cmd" value="_cart" />
-                                            <input type="hidden" name="add" value="1" />
-                                            <input type="hidden" name="w3ls_item" value="Mobile Phone3" />
-                                            <input type="hidden" name="amount" value="245.00" />
+                                            <input type="hidden" name="cmd" value="_cart">
+                                            <input type="hidden" name="add" value="1">
+                                            <input type="hidden" name="w3ls_item" value="Mobile Phone3">
+                                            <input type="hidden" name="amount" value="245.00">
                                             <button type="submit" class="w3ls-cart">Add to cart</button>
                                         </form>
                                     </div>
@@ -314,14 +232,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <div class="agile_ecommerce_tabs">
                                 <div class="col-md-4 agile_ecommerce_tab_left">
                                     <div class="hs-wrapper">
-                                        <img src="~/Content/images/8.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/9.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/10.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/8.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/9.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/10.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/8.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/9.jpg" alt=" " class="img-responsive" />
+                                        <img src="~/Content/images/8.jpg" alt=" " class="img-responsive">
+                                        <img src="~/Content/images/9.jpg" alt=" " class="img-responsive">
+                                        <img src="~/Content/images/10.jpg" alt=" " class="img-responsive">
+                                        <img src="~/Content/images/8.jpg" alt=" " class="img-responsive">
+                                        <img src="~/Content/images/9.jpg" alt=" " class="img-responsive">
+                                        <img src="~/Content/images/10.jpg" alt=" " class="img-responsive">
+                                        <img src="~/Content/images/8.jpg" alt=" " class="img-responsive">
+                                        <img src="~/Content/images/9.jpg" alt=" " class="img-responsive">
                                         <div class="w3_hs_bottom">
                                             <ul>
                                                 <li>
@@ -334,24 +252,24 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     <p><span>$320</span> <i class="item_price">$250</i></p>
                                     <div class="simpleCart_shelfItem">
                                         <form action="#" method="post">
-                                            <input type="hidden" name="cmd" value="_cart" />
-                                            <input type="hidden" name="add" value="1" />
-                                            <input type="hidden" name="w3ls_item" value="Speakers" />
-                                            <input type="hidden" name="amount" value="250.00" />
+                                            <input type="hidden" name="cmd" value="_cart">
+                                            <input type="hidden" name="add" value="1">
+                                            <input type="hidden" name="w3ls_item" value="Speakers">
+                                            <input type="hidden" name="amount" value="250.00">
                                             <button type="submit" class="w3ls-cart">Add to cart</button>
                                         </form>
                                     </div>
                                 </div>
                                 <div class="col-md-4 agile_ecommerce_tab_left">
                                     <div class="hs-wrapper">
-                                        <img src="~/Content/images/9.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/8.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/10.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/8.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/9.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/10.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/8.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/9.jpg" alt=" " class="img-responsive" />
+                                        <img src="~/Content/images/9.jpg" alt=" " class="img-responsive">
+                                        <img src="~/Content/images/8.jpg" alt=" " class="img-responsive">
+                                        <img src="~/Content/images/10.jpg" alt=" " class="img-responsive">
+                                        <img src="~/Content/images/8.jpg" alt=" " class="img-responsive">
+                                        <img src="~/Content/images/9.jpg" alt=" " class="img-responsive">
+                                        <img src="~/Content/images/10.jpg" alt=" " class="img-responsive">
+                                        <img src="~/Content/images/8.jpg" alt=" " class="img-responsive">
+                                        <img src="~/Content/images/9.jpg" alt=" " class="img-responsive">
                                         <div class="w3_hs_bottom">
                                             <ul>
                                                 <li>
@@ -364,24 +282,24 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     <div class="simpleCart_shelfItem">
                                         <p><span>$180</span> <i class="item_price">$150</i></p>
                                         <form action="#" method="post">
-                                            <input type="hidden" name="cmd" value="_cart" />
-                                            <input type="hidden" name="add" value="1" />
-                                            <input type="hidden" name="w3ls_item" value="Headphones" />
-                                            <input type="hidden" name="amount" value="150.00" />
+                                            <input type="hidden" name="cmd" value="_cart">
+                                            <input type="hidden" name="add" value="1">
+                                            <input type="hidden" name="w3ls_item" value="Headphones">
+                                            <input type="hidden" name="amount" value="150.00">
                                             <button type="submit" class="w3ls-cart">Add to cart</button>
                                         </form>
                                     </div>
                                 </div>
                                 <div class="col-md-4 agile_ecommerce_tab_left">
                                     <div class="hs-wrapper">
-                                        <img src="~/Content/images/10.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/8.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/9.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/8.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/9.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/10.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/8.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/9.jpg" alt=" " class="img-responsive" />
+                                        <img src="~/Content/images/10.jpg" alt=" " class="img-responsive">
+                                        <img src="~/Content/images/8.jpg" alt=" " class="img-responsive">
+                                        <img src="~/Content/images/9.jpg" alt=" " class="img-responsive">
+                                        <img src="~/Content/images/8.jpg" alt=" " class="img-responsive">
+                                        <img src="~/Content/images/9.jpg" alt=" " class="img-responsive">
+                                        <img src="~/Content/images/10.jpg" alt=" " class="img-responsive">
+                                        <img src="~/Content/images/8.jpg" alt=" " class="img-responsive">
+                                        <img src="~/Content/images/9.jpg" alt=" " class="img-responsive">
                                         <div class="w3_hs_bottom">
                                             <ul>
                                                 <li>
@@ -394,10 +312,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     <div class="simpleCart_shelfItem">
                                         <p><span>$220</span> <i class="item_price">$180</i></p>
                                         <form action="#" method="post">
-                                            <input type="hidden" name="cmd" value="_cart" />
-                                            <input type="hidden" name="add" value="1" />
-                                            <input type="hidden" name="w3ls_item" value="Audio Player" />
-                                            <input type="hidden" name="amount" value="180.00" />
+                                            <input type="hidden" name="cmd" value="_cart">
+                                            <input type="hidden" name="add" value="1">
+                                            <input type="hidden" name="w3ls_item" value="Audio Player">
+                                            <input type="hidden" name="amount" value="180.00">
                                             <button type="submit" class="w3ls-cart">Add to cart</button>
                                         </form>
                                     </div>
@@ -409,14 +327,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <div class="agile_ecommerce_tabs">
                                 <div class="col-md-4 agile_ecommerce_tab_left">
                                     <div class="hs-wrapper">
-                                        <img src="~/Content/images/11.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/12.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/13.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/11.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/12.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/13.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/11.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/12.jpg" alt=" " class="img-responsive" />
+                                        <img src="~/Content/images/11.jpg" alt=" " class="img-responsive">
+                                        <img src="~/Content/images/12.jpg" alt=" " class="img-responsive">
+                                        <img src="~/Content/images/13.jpg" alt=" " class="img-responsive">
+                                        <img src="~/Content/images/11.jpg" alt=" " class="img-responsive">
+                                        <img src="~/Content/images/12.jpg" alt=" " class="img-responsive">
+                                        <img src="~/Content/images/13.jpg" alt=" " class="img-responsive">
+                                        <img src="~/Content/images/11.jpg" alt=" " class="img-responsive">
+                                        <img src="~/Content/images/12.jpg" alt=" " class="img-responsive">
                                         <div class="w3_hs_bottom">
                                             <ul>
                                                 <li>
@@ -429,24 +347,24 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     <div class="simpleCart_shelfItem">
                                         <p><span>$880</span> <i class="item_price">$850</i></p>
                                         <form action="#" method="post">
-                                            <input type="hidden" name="cmd" value="_cart" />
-                                            <input type="hidden" name="add" value="1" />
-                                            <input type="hidden" name="w3ls_item" value="Laptop" />
-                                            <input type="hidden" name="amount" value="850.00" />
+                                            <input type="hidden" name="cmd" value="_cart">
+                                            <input type="hidden" name="add" value="1">
+                                            <input type="hidden" name="w3ls_item" value="Laptop">
+                                            <input type="hidden" name="amount" value="850.00">
                                             <button type="submit" class="w3ls-cart">Add to cart</button>
                                         </form>
                                     </div>
                                 </div>
                                 <div class="col-md-4 agile_ecommerce_tab_left">
                                     <div class="hs-wrapper">
-                                        <img src="~/Content/images/12.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/11.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/13.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/11.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/12.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/13.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/11.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/12.jpg" alt=" " class="img-responsive" />
+                                        <img src="~/Content/images/12.jpg" alt=" " class="img-responsive">
+                                        <img src="~/Content/images/11.jpg" alt=" " class="img-responsive">
+                                        <img src="~/Content/images/13.jpg" alt=" " class="img-responsive">
+                                        <img src="~/Content/images/11.jpg" alt=" " class="img-responsive">
+                                        <img src="~/Content/images/12.jpg" alt=" " class="img-responsive">
+                                        <img src="~/Content/images/13.jpg" alt=" " class="img-responsive">
+                                        <img src="~/Content/images/11.jpg" alt=" " class="img-responsive">
+                                        <img src="~/Content/images/12.jpg" alt=" " class="img-responsive">
                                         <div class="w3_hs_bottom">
                                             <ul>
                                                 <li>
@@ -459,24 +377,24 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     <div class="simpleCart_shelfItem">
                                         <p><span>$290</span> <i class="item_price">$280</i></p>
                                         <form action="#" method="post">
-                                            <input type="hidden" name="cmd" value="_cart" />
-                                            <input type="hidden" name="add" value="1" />
-                                            <input type="hidden" name="w3ls_item" value="Notebook" />
-                                            <input type="hidden" name="amount" value="280.00" />
+                                            <input type="hidden" name="cmd" value="_cart">
+                                            <input type="hidden" name="add" value="1">
+                                            <input type="hidden" name="w3ls_item" value="Notebook">
+                                            <input type="hidden" name="amount" value="280.00">
                                             <button type="submit" class="w3ls-cart">Add to cart</button>
                                         </form>
                                     </div>
                                 </div>
                                 <div class="col-md-4 agile_ecommerce_tab_left">
                                     <div class="hs-wrapper">
-                                        <img src="~/Content/images/13.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/11.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/12.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/11.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/12.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/13.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/11.jpg" alt=" " class="img-responsive" />
-                                        <img src="~/Content/images/12.jpg" alt=" " class="img-responsive" />
+                                        <img src="~/Content/images/13.jpg" alt=" " class="img-responsive">
+                                        <img src="~/Content/images/11.jpg" alt=" " class="img-responsive">
+                                        <img src="~/Content/images/12.jpg" alt=" " class="img-responsive">
+                                        <img src="~/Content/images/11.jpg" alt=" " class="img-responsive">
+                                        <img src="~/Content/images/12.jpg" alt=" " class="img-responsive">
+                                        <img src="~/Content/images/13.jpg" alt=" " class="img-responsive">
+                                        <img src="~/Content/images/11.jpg" alt=" " class="img-responsive">
+                                        <img src="~/Content/images/12.jpg" alt=" " class="img-responsive">
                                         <div class="w3_hs_bottom">
                                             <ul>
                                                 <li>
@@ -489,24 +407,23 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     <div class="simpleCart_shelfItem">
                                         <p><span>$120</span> <i class="item_price">$80</i></p>
                                         <form action="#" method="post">
-                                            <input type="hidden" name="cmd" value="_cart" />
-                                            <input type="hidden" name="add" value="1" />
-                                            <input type="hidden" name="w3ls_item" value="Kid's Toy" />
-                                            <input type="hidden" name="amount" value="80.00" />
+                                            <input type="hidden" name="cmd" value="_cart">
+                                            <input type="hidden" name="add" value="1">
+                                            <input type="hidden" name="w3ls_item" value="Kid's Toy">
+                                            <input type="hidden" name="amount" value="80.00">
                                             <button type="submit" class="w3ls-cart">Add to cart</button>
                                         </form>
                                     </div>
                                 </div>
                                 <div class="clearfix"> </div>
                             </div>
-                        </div>                                              
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="clearfix"> </div>
         </div>
     </div>
-    <!-- //banner-bottom -->
     <!-- modal-video -->
     <div class="modal video-modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal">
         <div class="modal-dialog" role="document">
