@@ -32,6 +32,13 @@ namespace WebSiteBanHang.Controllers
             return PartialView("~/Views/Home/LoginPartial.cshtml", tv);
         }
 
+        [HttpGet]
+        public ActionResult LeftMenu()
+        {
+            var lstSP = db.SanPhams;
+            return PartialView(lstSP);
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)
