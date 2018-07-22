@@ -47,10 +47,5 @@ namespace WebSiteBanHang.Models
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<usp_getLaptopNew_Result>("usp_getLaptopNew");
         }
-    
-        public virtual ObjectResult<usp_getAllProducts_Result> usp_getAllProducts()
-        {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<usp_getAllProducts_Result>("usp_getAllProducts");
-        }
     }
 }

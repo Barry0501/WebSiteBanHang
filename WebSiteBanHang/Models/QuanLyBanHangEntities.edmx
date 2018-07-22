@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="QuanLyBanHangModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="QuanLyBanHangModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="BinhLuan">
           <Key>
             <PropertyRef Name="MaBL" />
@@ -439,7 +439,8 @@
             <End Role="ThanhVien" EntitySet="ThanhVien" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="QuanLyBanHangModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -906,32 +907,8 @@
             <End Role="SanPham" EntitySet="SanPhams" />
           </AssociationSet>
           <FunctionImport Name="usp_getLaptopNew" ReturnType="Collection(QuanLyBanHangModel.usp_getLaptopNew_Result)" />
-          <FunctionImport Name="usp_getAllProducts" ReturnType="Collection(QuanLyBanHangModel.usp_getAllProducts_Result)" />
         </EntityContainer>
         <ComplexType Name="usp_getLaptopNew_Result">
-          <Property Type="Int32" Name="MaSP" Nullable="false" />
-          <Property Type="String" Name="TenSP" Nullable="true" MaxLength="255" />
-          <Property Type="Decimal" Name="DonGia" Nullable="true" Precision="18" Scale="0" />
-          <Property Type="DateTime" Name="NgayCapNhap" Nullable="true" Precision="23" />
-          <Property Type="String" Name="CauHinh" Nullable="true" />
-          <Property Type="String" Name="MoTa" Nullable="true" />
-          <Property Type="String" Name="HinhAnh" Nullable="true" />
-          <Property Type="Int32" Name="SoLuongTon" Nullable="true" />
-          <Property Type="Int32" Name="LuotXem" Nullable="true" />
-          <Property Type="Int32" Name="LuotBinhChon" Nullable="true" />
-          <Property Type="Int32" Name="LuotBinhLuan" Nullable="true" />
-          <Property Type="Int32" Name="SoLanMua" Nullable="true" />
-          <Property Type="Int32" Name="Moi" Nullable="true" />
-          <Property Type="Int32" Name="MaNCC" Nullable="true" />
-          <Property Type="Int32" Name="MaNSX" Nullable="true" />
-          <Property Type="Int32" Name="MaLoaiSP" Nullable="true" />
-          <Property Type="Boolean" Name="DaXoa" Nullable="true" />
-          <Property Type="String" Name="HinhAnh1" Nullable="true" />
-          <Property Type="String" Name="HinhAnh2" Nullable="true" />
-          <Property Type="String" Name="HinhAnh3" Nullable="true" />
-          <Property Type="String" Name="HinhAnh4" Nullable="true" />
-        </ComplexType>
-        <ComplexType Name="usp_getAllProducts_Result">
           <Property Type="Int32" Name="MaSP" Nullable="false" />
           <Property Type="String" Name="TenSP" Nullable="true" MaxLength="255" />
           <Property Type="Decimal" Name="DonGia" Nullable="true" Precision="18" Scale="0" />

@@ -286,9 +286,6 @@
     <Compile Include="Models\ThanhVien.cs">
       <DependentUpon>QuanLyBanHangEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\usp_getAllProducts_Result.cs">
-      <DependentUpon>QuanLyBanHangEntities.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\usp_getLaptopNew_Result.cs">
       <DependentUpon>QuanLyBanHangEntities.tt</DependentUpon>
     </Compile>
